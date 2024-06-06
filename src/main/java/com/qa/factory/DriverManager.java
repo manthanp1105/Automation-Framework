@@ -14,13 +14,23 @@ public class DriverManager {
 	public Properties prop;
 
 	public WebDriver driver;
-	String url = "https://naveenautomationlabs.com/opencart/index.php?route=account/login";
-
-	public WebDriver initDriver(String browser) {
-		if (browser.trim().equalsIgnoreCase("chrome")) {
+	
+	// one forward slash ** Enter
+	
+	/**
+	 * 
+	 * @param browser
+	 * @return
+	 */
+	
+	public WebDriver initDriver(Properties prop) {
+		
+		String browsername = prop.getProperty("browser").toLowerCase().trim();
+		
+		if (browsername.equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
 
-		} else if (browser.trim().equalsIgnoreCase("Firefox")) {
+		} else if (browsername.equalsIgnoreCase("Firefox")) {
 			driver = new FirefoxDriver();
 
 		} else
@@ -28,7 +38,7 @@ public class DriverManager {
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.get(url);
+		driver.get(prop.getProperty("url"));
 
 		return driver;
 	}

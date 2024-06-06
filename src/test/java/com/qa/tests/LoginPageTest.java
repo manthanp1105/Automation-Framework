@@ -26,7 +26,7 @@ public class LoginPageTest extends BaseTest {
 
 	@Test(priority =3)
 	public void loginTest() {
-		lp.doLogin("mpandya1105@gmail.com", "Test123");
+		lp.doLogin(prop.getProperty("username").trim(), prop.getProperty("password").trim());
 	}
 
 }

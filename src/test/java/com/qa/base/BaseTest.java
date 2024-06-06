@@ -1,5 +1,7 @@
 package com.qa.base;
 
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -16,12 +18,14 @@ public class BaseTest {
 	protected LoginPage lp;
 	protected AccountsPage ap;
 	protected RegisterPage rp;
+	protected Properties prop;
 
 	@BeforeTest
 	public void setUp() {
 
 		dm = new DriverManager();
-		driver = dm.initDriver("chrome");
+		prop = dm.initProperties();
+		driver = dm.initDriver(prop);
 		lp = new LoginPage(driver);
 		ap = new AccountsPage(driver);
 		rp = new RegisterPage(driver);
