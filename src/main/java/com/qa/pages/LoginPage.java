@@ -23,6 +23,7 @@ public class LoginPage {
 
 	public String getPageTitle() {
 		String acttitle = driver.getTitle();
+		System.out.println("Title is: "+acttitle);
 		return acttitle;
 	}
 
