@@ -20,7 +20,7 @@ public class LoginPageTest extends BaseTest {
 	@Test (priority =2)
 	public void registerLinkTest() {
 		String exptext = lp.getRegisterLink();
-		//System.out.println("Link name is: "+exptext);
+		System.out.println("Link name is: "+exptext);
 		Assert.assertEquals(exptext, "Register");
 	}
 
