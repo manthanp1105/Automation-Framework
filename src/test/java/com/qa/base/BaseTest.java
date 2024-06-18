@@ -17,7 +17,7 @@ public class BaseTest {
 	protected DriverManager dm;
 	protected LoginPage lp;
 	protected AccountsPage ap;
-	protected RegisterPage rp;
+	//protected RegisterPage rp;
 	protected Properties prop;
 
 	@BeforeMethod
@@ -30,7 +30,7 @@ public class BaseTest {
 		
 		
 		ap = new AccountsPage(driver);
-		rp = new RegisterPage(driver);
+		//rp = new RegisterPage(driver);
 
 	}
 

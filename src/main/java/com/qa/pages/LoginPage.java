@@ -42,10 +42,10 @@ public class LoginPage {
 
 	}
 
-	public RegisterPage goToRegisterPage() {
-		eu.doClick(Registerlink);
-		return new RegisterPage(driver);
-
-	}
+//	public RegisterPage goToRegisterPage() {
+//		eu.doClick(Registerlink);
+//		return new RegisterPage(driver);
+//
+//	}
 
 }
